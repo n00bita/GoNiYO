@@ -1,0 +1,6 @@
+package com.goniyo.stock;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RequestsRepository extends CrudRepository<Requests,Integer>{
+
+}

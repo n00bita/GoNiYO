@@ -1,0 +1,58 @@
+package com.goniyo.stock;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+//@Entity
+public class Requests {
+/*	
+	
+	public Requests(int requestId, Broker buyer, Broker seller, String date, boolean acceptance) {
+		super();
+		this.requestId = requestId;
+		this.buyer = buyer;
+		this.seller = seller;
+		this.date = date;
+		this.acceptance = acceptance;
+	}
+	
+	@Id
+	int requestId;
+	Broker buyer;
+	Broker seller;
+	String date;
+    boolean acceptance;
+    
+    
+	public int getRequestId() {
+		return requestId;
+	}
+	public void setRequestId(int requestId) {
+		this.requestId = requestId;
+	}
+	public Broker getBuyer() {
+		return buyer;
+	}
+	public void setBuyer(Broker buyer) {
+		this.buyer = buyer;
+	}
+	public Broker getSeller() {
+		return seller;
+	}
+	public void setSeller(Broker seller) {
+		this.seller = seller;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public boolean isAcceptance() {
+		return acceptance;
+	}
+	public void setAcceptance(boolean acceptance) {
+		this.acceptance = acceptance;
+	}
+	*/
+}
