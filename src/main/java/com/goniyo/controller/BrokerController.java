@@ -70,8 +70,14 @@ public class BrokerController {
 		//Update Stock Price
 		stockRepository.setUserInfoById(buyer.getBidPrice(), buyer.getStockId());
 		//Update Amount Owned
-		
+	    	
+		     //Check If he has any
+		List<Ownership> owner=ownershipRepository.findByBrokerId(buyer.getBuyerId());
+		List<Integer> ownedstocks = owner.stream().map(x -> x.getStockId()).collect(Collectors.toList());
+		if(ownedstocks.contains(buyer.getStockId()))
 		ownershipRepository.incQuantityByBrokerId(buyer.getStockId(),buyer.getBuyerId());
+		else
+			ownershipRepository.save(new Ownership(buyer.getStockId(),1,buyer.getBuyerId()));
 		ownershipRepository.decQuantityByBrokerId(buyer.getStockId(),sellerId);
 		//Delete it from the active requests.
 		buyRepository.deleteByBuyId(buyreqId);
